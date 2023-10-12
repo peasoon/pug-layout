@@ -1,0 +1,58 @@
+.faq {
+  h3 {
+    text-align: center;
+  }
+}
+
+.accordion {
+  list-style: none;
+  width: 500px;
+  margin-inline: auto;
+  border: 1px solid var(--yeshoText);
+  padding: 10px;
+  @media(max-width:550px) {
+    width: 100%;
+  }
+}
+
+.accordion__item {
+  position: relative;
+  border-bottom: 1px solid var(--yeshoText);
+  padding-bottom: 5px;
+  + .accordion__item {
+    margin-top: 10px;
+  }
+  &::after {
+    content: url("./../../images/arrow-up.svg");
+    position: absolute;
+    right: 0;
+    top: 5px;
+    transform: rotate(180deg);
+    transition: 0.5s;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-color: var(--yeshoText);
+  }
+  button {
+    padding: 5px 15px;
+  }
+  &.active {
+    &::after {
+      transform: rotate(0deg);
+    }
+    .ac-item__content {
+      grid-template-rows: 1fr;
+    }
+  }
+}
+
+.ac-item__content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: 1.5s;
+
+  > div {
+    overflow: hidden;
+  }
+}

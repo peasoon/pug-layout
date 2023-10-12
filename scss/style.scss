@@ -1,0 +1,65 @@
+@import "./includes/variables.scss";
+@import "./includes/hamburgers.min.scss";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: var(--container-width);
+  padding-inline: var(--container-padding);
+  margin-inline: auto;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+section:not(:first-of-type) {
+  color: var(--yeshoText);
+}
+.wrapper {
+  max-width: 1920px;
+
+  color: var(--mainText);
+
+  font-size: 24px;
+  margin-inline: auto;
+  background-image: url("./../images/body-bg.jpg");
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  background-position: center;
+  background-size: cover;
+}
+
+a {
+  transition: var(--transition-time);
+
+  &:hover {
+    color: var(--secondaryText);
+  }
+}
+
+section {
+  padding-block: 50px;
+  @media(max-width:768px) {
+    padding-block: 10px;
+  }
+}
+h2,
+h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+@import "./includes/user-menu.scss";
+@import "./includes/header.scss";
+@import "./includes/section-info.scss";
+@import "./includes/section-shop.scss";
+@import "./includes/section-assortment.scss";
+@import "./includes/section-contacts.scss";
+@import "./includes/section-faq.scss";

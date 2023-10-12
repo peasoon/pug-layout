@@ -1,0 +1,28 @@
+{
+  "name": "test",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "pug": "pug -w ./pug -o ./ -P",
+    "scss": "sass --watch scss/style.scss:style.css",
+    "stylelint": "stylelint \"**/*.(s)css\" --fix"
+  },
+  "devDependencies": {
+    "@yandex/ymaps3-types": "^0.0.16",
+    "stylelint": "^15.10.3",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "@types/yandex-maps": "^2.1.31",
+    "hamburgers": "^1.2.1",
+    "sass": "^1.66.1",
+    "ts-debounce": "^4.0.0",
+    "yandex-maps": "^0.0.1",
+    "ymaps": "^0.2.1"
+  }
+}

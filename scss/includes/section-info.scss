@@ -1,0 +1,62 @@
+.info {
+  background-image: url("./../../images/bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-block: 300px;
+  position: relative;
+  @media(max-width:768px) {
+    font-size: 16px;
+    padding-block: 100px;
+  }
+}
+
+.info__logo {
+  position: relative;
+
+  width: fit-content;
+
+  text-align: center;
+
+  font-family: var(--cute-font);
+  margin-inline: auto;
+  @media(max-width:768px) {
+    translate: -100px;
+  }
+}
+
+.info__slogan {
+  position: absolute;
+  top: 100%;
+  left: 100%;
+
+  display: block;
+
+  width: max-content;
+}
+
+.info__decor {
+  width: 300px;
+  height: 300px;
+  background-color: tomato;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  transform: translate(calc(-50% - 150px), -50%);
+  opacity: 0;
+  border: 10px solid lightgreen;
+  @media(max-width:768px) {
+    width: 150px;
+    height: 150px;
+  }
+  &.animated {
+    animation: appear 1s linear forwards;
+  }
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
